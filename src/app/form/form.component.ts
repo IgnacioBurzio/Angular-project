@@ -95,7 +95,9 @@ export class FormComponent implements OnInit {
     //validar los campos completos
     for (let i of Object.keys(persona)) {
       if (persona[i] === '') {
-        return (this.error = true);
+        this.error = true;
+        this.exito = false;
+        return;
       }
     }
     //manejo de mensajes de error

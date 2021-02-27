@@ -12,10 +12,9 @@
   </thead>
   <tbody>
     <tr *ngFor="let persona of baseDePersonas">
-      <!-- <th scope="row">{{ persona.id }}</th> -->
       <td scope="row">{{ persona.apellido }}</td>
       <td>{{ persona.nombre }}</td>
-      <td>{{ persona.nacimiento }}</td>
+      <td>{{ persona.nacimiento | date: "dd/MM/yyyy" }}</td>
       <td>{{ persona.direccion }}</td>
       <td>{{ persona.telefono }}</td>
       <td>{{ persona.pais }}</td>
